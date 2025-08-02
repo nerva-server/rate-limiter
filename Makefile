@@ -3,7 +3,7 @@ CXXFLAGS := -std=c++20 -Wall -Wextra -O2 -fPIC
 
 SRC_DIR := src
 INC_DIR := includes
-BIN_DIR := bin
+BIN_DIR := build
 
 LIBS := -lnerva
 LIB_DIR := /usr/local/lib
