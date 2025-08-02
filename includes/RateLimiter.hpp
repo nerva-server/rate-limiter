@@ -11,5 +11,7 @@ class RateLimiter : public IHandler {
             int limit = 100;
         };
 
+        config Config;
+
         void Handle(Http::Request &req, Http::Response &res, std::function<void()> next) override;
 };

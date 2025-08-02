@@ -6,10 +6,6 @@ void RateLimiter::Handle(Http::Request &req, Http::Response &res, std::function<
 {
     try
     {
-        config Config;
-
-        Config.limit = 1;
-
         auto now = std::chrono::system_clock::now();
         auto recentRequests = ips.find_within_window(req.ip, std::chrono::milliseconds(Config.windowMs));
 
